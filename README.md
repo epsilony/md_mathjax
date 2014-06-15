@@ -61,3 +61,15 @@ python -m markdown -x mathjax demo/sample.md > demo/sample.html
 
 then open the `demo/sample.html` with your browser
 
+## use when programming ##
+put the `mdx_mathjax.py` into `PYTHONPATH`
+```python
+from mdx_mathjax import MathJaxExtension
+from markdown import Markdown
+
+text=r'$$ \frac{a}{b} $$'
+
+md=Markdown(extensions=[MathJaxExtension()])
+html=md.convert(text)
+print(html)
+```
