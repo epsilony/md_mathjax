@@ -1,15 +1,3 @@
-# md_mathjax #
-
-md_mathjax is a simple extension of the Python implementation of John Gruber's [Markdown](https://pypi.python.org/pypi/Markdown)
-
-## Supported MathJax LaTeX environments ##
-+ displayed: `$$ $$`
-+ displayed: `\[ \]`
-+ begin-end environment blocks: `\begin{} \end{}`
-+ inline: `\( \)`
-
-thus a typical sample markdown below can be parsed:
-```markdown
 <meta charset="utf8">
 <script type="text/javascript"
   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
@@ -49,15 +37,4 @@ e=mc^2
 a=&1\\
 \int_{a}^{b}\frac{c}{d}\,dx=&2
 \end{align*}
-```
-
-## try to use it ##
-
-```bash
-git clone git@github.com:epsilony/md_mathjax.git
-cd md_mathjax
-python -m markdown -x mathjax demo/sample.md > demo/sample.html
-```
-
-then open the `demo/sample.html` with your browser
 
